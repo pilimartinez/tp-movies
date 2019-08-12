@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    background-color: gray;
+}
+header {
+    display: flex;
+    .logo{
+        a{
+        .logoimg{
+            width: 35px;
+            padding: 18px 30px;
+            background-color: black;
+        }
+
+        }
+    }
+    .searchInput {
+        &:focus {
+            outline-width: 0;
+        }
+        font-size: 18px;
+        width: 90%;
+        background-color:white;
+        text-decoration: none;
+        border: none;
+        color: black;
+        box-sizing: content-box;
+        padding: 15px 25px;
+        height: 46px;
+    }
+
+}
+
+nav{
+    .types{
+        margin: 0px;
+        padding: 0px;
+        li{
+            width: 35px;
+            background-color: white;
+            list-style: none;
+            padding: 25px 30px;
+            border-bottom: 1px gray solid;
+            .type{
+                font-size: 10px;
+                text-decoration: none;
+                color: gray;
+                i{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
