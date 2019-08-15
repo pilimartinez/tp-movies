@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: gray;
@@ -6,8 +10,12 @@ body {
 header {
   display: flex;
 }
-header .logo a .logoimg {
-  width: 35px;
+header .logo {
+  width: 100px;
+  height: 45px;
+}
+header .logo .logoimg {
+  width: 100%;
   padding: 18px 30px;
   background-color: black;
 }
@@ -20,7 +28,7 @@ header .searchInput {
   color: black;
   box-sizing: content-box;
   padding: 15px 25px;
-  height: 46px;
+  height: 45px;
 }
 header .searchInput:focus {
   outline-width: 0;
@@ -31,7 +39,8 @@ nav .types {
   padding: 0px;
 }
 nav .types li {
-  width: 35px;
+  width: 100px;
+  text-align: center;
   background-color: white;
   list-style: none;
   padding: 25px 30px;

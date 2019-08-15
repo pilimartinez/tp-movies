@@ -1,18 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     background-color: gray;
 }
 header {
     display: flex;
+
     .logo{
-        a{
+       width: 100px;
+       height: 45px;
         .logoimg{
-            width: 35px;
+            width: 100%;
             padding: 18px 30px;
             background-color: black;
         }
 
-        }
+        
     }
     .searchInput {
         &:focus {
@@ -26,7 +32,7 @@ header {
         color: black;
         box-sizing: content-box;
         padding: 15px 25px;
-        height: 46px;
+        height: 45px;
     }
 
 }
@@ -36,7 +42,8 @@ nav{
         margin: 0px;
         padding: 0px;
         li{
-            width: 35px;
+            width: 100px;
+            text-align: center;
             background-color: white;
             list-style: none;
             padding: 25px 30px;
