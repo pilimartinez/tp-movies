@@ -4,28 +4,37 @@ const initialize = () => {
 fetch('https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}')
     .then(response => response.json())
     .then(res => {
-       // console.log(res)
+       //console.log(res)
         popularMovies(res.results)
-        topFivePopMovies(console.log(res.results))
+        //topFivePopMovies(console.log(res.results))
     })
 }
 
 const popularMovies = (popularMovies) => {
     let popularMovieDiv = document.getElementById('pop-mov')
-    
-   let popularMov =  popularMovies.forEach(e => {
-        
+    popularMovieDiv.classList.add('popularMovies')
+   let popularMov =  popularMovies.forEach(({title,poster_path}) => {
+    let movie = document.createElement('div')
+    movie.classList.add('movieResume')
     let popularMovieTitle = document.createElement('h1')
-    let popularMovieGeners = document.createElement('h2')
-    let popularMovieOverview = document.createElement('p')
-
-    popularMovieTitle.innerText= e.title
-    popularMovieGeners.innerText = moment(e.release_date).format('DD/MM/YYYY')
-    popularMovieOverview.innerText = e.overview
+    popularMovieTitle.classList.add('movieTitle')
+    let movieImage = document.createElement('img')
+    let imageContainer = document.createElement('a')
+    //let popularMovieGeners = document.createElement('h2')
+    //let popularMovieOverview = document.createElement('p')
+    imageContainer.href = '#'
+    popularMovieTitle.innerText= title
+    movieImage.src = `https://image.tmdb.org/t/p/w500/${poster_path}`
+    movieImage.classList.add('movieImage')
+    //popularMovieGeners.innerText = moment(e.release_date).format('DD/MM/YYYY')
+    //popularMovieOverview.innerText = e.overview
     
-    popularMovieDiv.appendChild(popularMovieTitle)
-    popularMovieDiv.appendChild(popularMovieGeners)
-    popularMovieDiv.appendChild(popularMovieOverview)
+    imageContainer.appendChild(movieImage)
+    movie.appendChild(imageContainer)
+    movie.appendChild(popularMovieTitle)
+    //movie.appendChild(popularMovieGeners)
+    //movie.appendChild(popularMovieOverview)
+    popularMovieDiv.appendChild(movie)
     })
 
     
