@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: gray;
+  background-color: pink;
 }
 
 header {
@@ -44,6 +44,17 @@ nav .types li .type {
 }
 nav .types li .type i {
   font-size: 18px;
+}
+
+.popularMovies {
+  display: flex;
+  flex-wrap: wrap;
+}
+.popularMovies .movieTitle {
+  font-size: 12px;
+}
+.popularMovies .movieImage {
+  width: 150px;
 }
 
 /*# sourceMappingURL=styles.css.map */

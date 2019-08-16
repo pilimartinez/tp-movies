@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: gray;
+    background-color: pink;
 }
 header {
     display: flex;
@@ -51,4 +51,18 @@ nav{
             }
         }
     }
+}
+
+.popularMovies{
+display: flex;
+flex-wrap: wrap;
+.movieResume{
+    }
+
+.movieTitle{
+    font-size: 12px;
+        }
+.movieImage{
+    width: 150px;
+        }
 }
