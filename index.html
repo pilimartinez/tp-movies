@@ -11,36 +11,40 @@
     <title>Document</title>
 </head>
 <body onload="initialize()">
-    <header>
-        <div class="logo">
-            <a href="#"> <img src="images/descarga.svg" class="logoimg"></a>
-        </div>
-            <input type="text" placeholder="Search for a movie..." class="searchInput">
-    </header>
-    <nav>
-        <ul class="types">
-            <li><a href="#" class="type"><i class="far fa-star"></i>POPULAR</a></li>
-            <li><a href="#" class="type"><i class="fas fa-award"></i>TOP RATED</a></li>
-            <li><a href="#" class="type"><i class="far fa-calendar-alt"></i>UPCOMING</a></li>
-            <li><a href="#" class="type"><i class="far fa-play-circle"></i>NOW PLAYING</a></li>
-        </ul>
-    </nav>
-    <section>
-        <div class="img-banner">
+    
+    <aside>
+        <div class="logo"><a href="#"> <img src="images/descarga.svg" class="logoimg"></a></div>
+        <nav>
+            <ul class="types">                
+                <li class="type"><a href="#" ><i class="far fa-star"></i>POPULAR</a></li>
+                <li class="type"><a href="#" ><i class="fas fa-award"></i>TOP RATED</a></li>
+                <li class="type"><a href="#" ><i class="far fa-calendar-alt"></i>UPCOMING</a></li>
+                <li class="type"><a href="#" ><i class="far fa-play-circle"></i>NOW PLAYING</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="container">
+        <header>
             
-        </div>
-        <div class="popular" id="pop-mov">
-            
-        </div>
-        <div class="top-rated">
-            
-        </div>
-        <div class="upcoming">
-            
-        </div>
-        <div class="now-playing">
-            
-        </div>
-    </section>
+                <input type="text" placeholder="Search for a movie..." class="searchInput">
+        </header>
+        <section>
+            <div class="img-banner">
+                
+            </div>
+            <div class="popular" id="pop-mov">
+                
+            </div>
+            <div class="top-rated">
+                
+            </div>
+            <div class="upcoming">
+                
+            </div>
+            <div class="now-playing">
+                
+            </div>
+        </section>
+    </div>
 </body>
 </html>

@@ -1,68 +1,90 @@
+@import "_reset.scss";
+@import "_mixin.scss";
+
 body{
     margin: 0;
     background-color: pink;
-}
-header {
-    display: flex;
-    .logo{
-        a{
-        .logoimg{
-            width: 35px;
-            padding: 18px 30px;
-            background-color: black;
-        }
-
-        }
-    }
-    .searchInput {
-        &:focus {
-            outline-width: 0;
-        }
-        font-size: 18px;
-        width: 90%;
-        background-color:white;
-        text-decoration: none;
-        border: none;
-        color: black;
-        box-sizing: content-box;
-        padding: 15px 25px;
-        height: 46px;
-    }
-
+   display: flex;
+    
 }
 
-nav{
-    .types{
-        margin: 0px;
-        padding: 0px;
-        li{
+aside{
+  
+    display:block;
+    background-color: white;
+    width: 95px;
+    top: 0px;
+    .logo a .logoimg{
+        width: 35px;
+        padding: 18px 30px;  
+        background-color: black;
+     
+    }
+    nav{
+        
+        
+        .types{
+            .type{
+            /* margin: 0px;
+            padding: 0px; */
+            @include font(10px);
+            text-decoration: none;
+            color: gray;            
             width: 35px;
             background-color: white;
             list-style: none;
             padding: 25px 30px;
-            border-bottom: 1px gray solid;
-            .type{
-                font-size: 10px;
-                text-decoration: none;
-                color: gray;
-                i{
-                    font-size: 18px;
+            border-bottom: 1px gray solid;                
+                 
+            
+                    }
                 }
+                
             }
         }
+    
+.container{
+    width: calc(100%-95px);
+    header {
+  
+        position: fixed;
+        width: 100%;
+        .searchInput {
+            &:focus {
+                outline-width: 0;
+            }
+            font-size: 18px;
+            width: 100%;
+            background-color:white;
+            text-decoration: none;
+            border: none;
+            color: black;
+            box-sizing: content-box;
+            padding: 15px 25px;
+            height: 46px;
+            
+        }
+    
     }
+    .popularMovies{
+        display: flex;
+        flex-wrap: wrap;
+        .movieResume{
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            width: 15%
+            }
+        
+        .movieTitle{
+            @include font(12px);
+                }
+        .movieImage{
+                display: block;
+                max-width: 100%;
+                height: auto;
+                }
+        }
 }
 
-.popularMovies{
-display: flex;
-flex-wrap: wrap;
-.movieResume{
-    }
 
-.movieTitle{
-    font-size: 12px;
-        }
-.movieImage{
-    width: 150px;
-        }
-}

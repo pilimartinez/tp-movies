@@ -1,12 +1,12 @@
 const apiKey = "1b63eaf9251799c15f140837c94d7a45"
-
+const popular ="popular"
 const initialize = () => {
 fetch('https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}')
     .then(response => response.json())
     .then(res => {
        //console.log(res)
         popularMovies(res.results)
-        //topFivePopMovies(console.log(res.results))
+       console.log(topFiveMovies(res.results))
     })
 }
 
@@ -16,7 +16,7 @@ const popularMovies = (popularMovies) => {
    let popularMov =  popularMovies.forEach(({title,poster_path}) => {
     let movie = document.createElement('div')
     movie.classList.add('movieResume')
-    let popularMovieTitle = document.createElement('h1')
+    let popularMovieTitle = document.createElement('p') // porque no todo puede tener H1
     popularMovieTitle.classList.add('movieTitle')
     let movieImage = document.createElement('img')
     let imageContainer = document.createElement('a')
@@ -40,8 +40,8 @@ const popularMovies = (popularMovies) => {
     
    
 } 
-/* 
-const topFivePopMovies = (movies) => {
-    movies.filter(top => top <5)
+ 
+const topFiveMovies = (movies) => {
+   return movies.filter((top, i) => { if(i <5) return top})
 }
- */
+ 
