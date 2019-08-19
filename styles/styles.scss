@@ -49,7 +49,7 @@ aside{
   
         position: fixed;
         width: 100%;
-        .searchInput {
+        #searchInput {
             &:focus {
                 outline-width: 0;
             }

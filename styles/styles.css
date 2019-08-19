@@ -60,7 +60,7 @@ aside nav .types .type {
   position: fixed;
   width: 100%;
 }
-.container header .searchInput {
+.container header #searchInput {
   font-size: 18px;
   width: 100%;
   background-color: white;
@@ -71,7 +71,7 @@ aside nav .types .type {
   padding: 15px 25px;
   height: 46px;
 }
-.container header .searchInput:focus {
+.container header #searchInput:focus {
   outline-width: 0;
 }
 .container .popularMovies {
