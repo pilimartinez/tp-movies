@@ -9,7 +9,7 @@ body{
 }
 
 aside{
-  
+    
     display:block;
     background-color: white;
     width: 95px;
@@ -18,10 +18,11 @@ aside{
         width: 35px;
         padding: 18px 30px;  
         background-color: black;
+
      
     }
     nav{
-        
+        position: fixed;
         
         .types{
             .type{
@@ -89,8 +90,11 @@ aside{
             }
         }
         .popularMovies{
+            padding: 15px;
+            box-sizing: border-box;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-evenly;
             .movieResume{
                 display: flex;
                 flex-direction: column;
@@ -100,6 +104,8 @@ aside{
             
             .movieTitle{
                 @include font(12px);
+                padding: 5px;
+                text-transform: uppercase;
                     }
             .movieImage{
                     display: block;
