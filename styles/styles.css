@@ -74,22 +74,30 @@ aside nav .types .type {
 .container header .searchInput:focus {
   outline-width: 0;
 }
-.container .popularMovies {
+.container section .img-banner {
+  background-image: url("images/banner-popcorn.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc(100%-95px);
+  height: 50%;
+}
+.container section .popularMovies {
   display: flex;
   flex-wrap: wrap;
 }
-.container .popularMovies .movieResume {
+.container section .popularMovies .movieResume {
   display: flex;
   flex-direction: column;
   padding: 5px;
   width: 15%;
 }
-.container .popularMovies .movieTitle {
+.container section .popularMovies .movieTitle {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #444;
 }
-.container .popularMovies .movieImage {
+.container section .popularMovies .movieImage {
   display: block;
   max-width: 100%;
   height: auto;
