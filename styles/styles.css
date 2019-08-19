@@ -39,8 +39,6 @@ aside .logo a .logoimg {
   background-color: black;
 }
 aside nav .types .type {
-  /* margin: 0px;
-  padding: 0px; */
   font-family: "Roboto", sans-serif;
   font-size: 10px;
   color: #444;
@@ -57,10 +55,11 @@ aside nav .types .type {
   width: calc(100%-95px);
 }
 .container header {
-  position: fixed;
   width: 100%;
+  position: absolute;
 }
 .container header .searchInput {
+  position: fixed;
   font-size: 18px;
   width: 100%;
   background-color: white;
@@ -74,13 +73,30 @@ aside nav .types .type {
 .container header .searchInput:focus {
   outline-width: 0;
 }
-.container section .img-banner {
-  background-image: url("images/banner-popcorn.jpg");
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: calc(100%-95px);
-  height: 50%;
+.container section {
+  margin-top: 76px;
+  display: block;
+}
+.container section .main-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background: no-repeat center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.container section .main-banner .img-banner {
+  height: 100%;
+  width: 100%;
+}
+.container section .main-banner h1 {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #444;
 }
 .container section .popularMovies {
   display: flex;
