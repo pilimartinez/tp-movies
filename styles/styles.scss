@@ -5,7 +5,6 @@ body{
     margin: 0;
     background-color: pink;
    display: flex;
-    
 }
 
 aside{
@@ -46,8 +45,7 @@ aside{
     width: calc(100%-95px);
     header {          
         width: 100%;
-        position: absolute;
-        .searchInput {
+        #searchInput {
             &:focus {
                 outline-width: 0;
             }
@@ -111,6 +109,11 @@ aside{
                     display: block;
                     max-width: 100%;
                     height: auto;
+
+                    &:hover{
+                        max-width: 104%;
+                        transition: 0.4s;
+                    }
                     }
             }
     }

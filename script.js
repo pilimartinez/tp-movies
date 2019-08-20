@@ -45,3 +45,15 @@ const topFiveMovies = (movies) => {
    return movies.filter((top, i) => { if(i <5) return top})
 }
  
+
+//search esta mal, hay q arreglar
+
+let textoBusqueda = document.getElementById('searchInput')
+
+const enterKeyPress = (event) => {
+    if (event.code === 'Enter') {
+console.log(textoBusqueda.value)
+    }
+}
+
+//`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${textoBusqueda}&page=${paginaActual}`
