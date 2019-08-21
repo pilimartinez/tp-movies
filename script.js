@@ -6,7 +6,7 @@ fetch('https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}')
     .then(res => {
        //console.log(res)
         popularMovies(res.results)
-       console.log(topFiveMovies(res.results))
+       //console.log(topFiveMovies(res.results))
     })
 }
 
@@ -45,11 +45,41 @@ const topFiveMovies = (movies) => {
    return movies.filter((top, i) => { if(i <5) return top})
 }
  
+// searchBar
 
-const enterKeyPress = (event) => {
+const paginaActual = 1;
+
+//const textoBusqueda = (event) => {
+   // if (event.code === 'Enter') {
+//let searchValue = event.target.value;
+//return searchValue;
+  //  }
+//}
+
+var task;
+var newTask;
+
+var textoBusqueda = function(event) {
     if (event.code === 'Enter') {
-console.log(event.target.value)
+        sendTask()
     }
 }
 
-//`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${textoBusqueda}&page=${paginaActual}`
+var sendTask = function() {
+    task = document.getElementById('searchInput');
+    newTask = task.value;
+
+    if (newTask !== "") {
+        task.value = "";
+    }
+}
+const hola = "s"
+const searchBar = () => {
+    fetch('https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${hola}&page=${paginaActual}')
+        .then(response => response.json())
+        .then(res => {
+           console.log(res)
+        })
+    }
+
+    searchBar()
