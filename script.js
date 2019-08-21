@@ -46,13 +46,9 @@ const topFiveMovies = (movies) => {
 }
  
 
-//search esta mal, hay q arreglar
-
-let textoBusqueda = document.getElementById('searchInput')
-console.log(textoBusqueda)
 const enterKeyPress = (event) => {
     if (event.code === 'Enter') {
-console.log(textoBusqueda.value)
+console.log(event.target.value)
     }
 }
 
