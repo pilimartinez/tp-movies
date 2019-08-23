@@ -1,14 +1,20 @@
 const apiKey = "1b63eaf9251799c15f140837c94d7a45"
-const popular ="popular"
-const initialize = () => {
-fetch('https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}')
+const customeFetch = (url) => {
+    const endPoint = `https://api.themoviedb.org/3/movie/${url}?api_key=${apiKey}`
+    return fetch(endPoint+url)
     .then(response => response.json())
+        }
+console.log(customeFetch("popular"))
+
+const initialize = () => {
+    customeFetch("popular")
     .then(res => {
-       //console.log(res)
-        popularMovies(res.results)
-       //console.log(topFiveMovies(res.results))
+        //console.log(res)
+         popularMovies(res.results)
+        //console.log(topFiveMovies(res.results))
     })
 }
+
 
 const popularMovies = (popularMovies) => {
     let popularMovieDiv = document.getElementById('pop-mov')
@@ -78,7 +84,7 @@ const searchBar = () => {
     fetch('https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${hola}&page=${paginaActual}')
         .then(response => response.json())
         .then(res => {
-           console.log(res)
+          // console.log(res)
         })
     }
 
