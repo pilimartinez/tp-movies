@@ -49,13 +49,6 @@ const topFiveMovies = (movies) => {
 
 const paginaActual = 1;
 
-//const textoBusqueda = (event) => {
-   // if (event.code === 'Enter') {
-//let searchValue = event.target.value;
-//return searchValue;
-  //  }
-//}
-
 var task;
 var newTask;
 
@@ -73,9 +66,9 @@ var sendTask = function() {
         task.value = "";
     }
 }
-const hola = "s"
+
 const searchBar = () => {
-    fetch('https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${hola}&page=${paginaActual}')
+    fetch('https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${newTask}&page=${paginaActual}')
         .then(response => response.json())
         .then(res => {
            console.log(res)
