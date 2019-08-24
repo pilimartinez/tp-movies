@@ -66,25 +66,34 @@ aside{
         }
     
     }
-    .popularMovies{
-        display: flex;
-        flex-wrap: wrap;
-        .movieResume{
-            display: flex;
-            flex-direction: column;
-            padding: 5px;
-            width: 15%
-            }
-        
-        .movieTitle{
-            @include font(12px);
-                }
-        .movieImage{
-                display: block;
-                max-width: 100%;
-                height: auto;
-                }
+    section{
+        .img-banner{
+            background-image: url("images/banner-popcorn.jpg");
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: calc(100%-95px);
+            height: 50%; 
         }
+        .popularMovies{
+            display: flex;
+            flex-wrap: wrap;
+            .movieResume{
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+                width: 15%
+                }
+            
+            .movieTitle{
+                @include font(12px);
+                    }
+            .movieImage{
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                    }
+            }
+    }
 }
-
 
