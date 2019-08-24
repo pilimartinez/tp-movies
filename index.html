@@ -10,16 +10,16 @@
     <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body onload="initialize()">
+<body >
     
     <aside>
         <div class="logo"><a href="#"> <img src="images/descarga.svg" class="logoimg"></a></div>
         <nav>
             <ul class="types">                
-                <li class="type"><a href="#" onclick="customeFetch('popular')"><i class="far fa-star"></i>POPULAR</a></li>
-                <li class="type"><a href="#" ><i class="fas fa-award"></i>TOP RATED</a></li>
-                <li class="type"><a href="#" ><i class="far fa-calendar-alt"></i>UPCOMING</a></li>
-                <li class="type"><a href="#" ><i class="far fa-play-circle"></i>NOW PLAYING</a></li>
+                <li class="type"><a href="#" onclick="searchCategory('popular')"><i class="far fa-star"></i>POPULAR</a></li>
+                <li class="type"><a href="#" onclick="searchCategory('top_rated')"><i class="fas fa-award"></i>TOP RATED</a></li>
+                <li class="type"><a href="#" onclick="searchCategory('upcoming')"><i class="far fa-calendar-alt"></i>UPCOMING</a></li>
+                <li class="type"><a href="#" onclick="searchCategory('now_playing')"><i class="far fa-play-circle"></i>NOW PLAYING</a></li>
             </ul>
         </nav>
     </aside>
@@ -34,15 +34,6 @@
                 <img src="images/banner-film.jpg" class='img-banner'>
             </div>
             <div class="popular" id="pop-mov">
-                
-            </div>
-            <div class="top-rated">
-                
-            </div>
-            <div class="upcoming">
-                
-            </div>
-            <div class="now-playing">
                 
             </div>
         </section>
