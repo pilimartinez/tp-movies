@@ -26,7 +26,8 @@
     <div class="container">
         <header>
             
-                <input type="text" placeholder="Search for a movie..." id="searchInput" onkeypress="textoBusqueda(event)">
+                <input type="text" placeholder="Search for a movie..." id="searchInput" onkeyup="handleSearch()">
+                <ul id="search-results"></ul>
         </header>
         <section>
             <div class="main-banner">
@@ -34,9 +35,33 @@
                 <img src="images/banner-film.jpg" class='img-banner'>
             </div>
             <div class="popular" id="pop-mov">
-                
-            </div>
+                </div>
         </section>
     </div>
+<!-- <nuevo> -->
+    <div id="modalContainer">
+        <div id="modalBackground">
+            <div id="modal">
+                <div id="upperModal">
+                    <button type="button" onclick="toggleFunction()">Cerrar</button>
+                
+                    <h2 id="mainTitle"></h2>
+                    <p id="slogan"></p>
+                </div>
+                <div id="lowerModal">
+                    <p id="movieDescription"></p>
+                    <div>
+                        <h4 class="modalTitle">GÉNERO</h4>
+                        <p id="genre"></p>
+                    </div>
+                    <div>
+                        <h4 class="modalTitle">FECHA DE LANZAMIENTO</h4>
+                        <p id="releaseDate"></p>
+                    </div>
+                </div>
+                <div id="largePoster"></div>
+            </div>
+        </div>
+
 </body>
 </html>

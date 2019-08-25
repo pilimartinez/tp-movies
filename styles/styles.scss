@@ -5,6 +5,7 @@ body{
     margin: 0;
     background-color: pink;
    display: flex;
+   z-index: 0;
 }
 
 aside{
@@ -21,7 +22,6 @@ aside{
      
     }
     nav{
-        position: fixed;
         
         .types{
             .type{
@@ -49,7 +49,6 @@ aside{
             &:focus {
                 outline-width: 0;
             }
-            position: fixed;
             font-size: 18px;
             width: 100%;
             background-color:white;
@@ -64,7 +63,6 @@ aside{
     
     }
     section{
-        margin-top: 76px;
         display: block;
         .main-banner{
             display: flex;
@@ -105,17 +103,57 @@ aside{
                 padding: 5px;
                 text-transform: uppercase;
                     }
-            .movieImage{
-                    display: block;
-                    max-width: 100%;
-                    height: auto;
-
-                    &:hover{
-                        max-width: 104%;
-                        transition: 0.4s;
-                    }
+                .movieImage{
+                            display: block;
+                            max-width: 100%;
+                            height: auto;
+        
+                            &:hover{
+                                max-width: 104%;
+                                transition: 0.4s;
+                            }
+                            }
                     }
             }
-    }
 }
 
+
+#modalContainer {
+    display:none;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 99;
+}
+
+#modalBackground {
+    width:100vw;
+    height:100vh;
+    background-color:rgba(250, 218, 221, 0.9);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#modal {
+    height:80%;
+    width:50%;
+}
+
+#upperModal {
+    height:50%;
+    background-color:aqua;
+}
+
+#lowerModal {
+    height:50%;
+    background-color: antiquewhite
+}
+
+#search-results {
+    display: flex;
+    flex-direction: column;
+    .result{
+        color: white;
+    }
+}
