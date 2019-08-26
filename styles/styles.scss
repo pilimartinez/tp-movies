@@ -53,6 +53,8 @@ aside{
     width: calc(100%-95px);
     header {          
         width: 100%;
+        .first-mob{
+            display: flex;
         #searchInput {
             &:focus {
                 outline-width: 0;
@@ -68,7 +70,9 @@ aside{
             height: 49px;
             
         }
-    
+        .burger-button{
+            display: none;
+        }}
     }
     section{
         display: block;
@@ -197,3 +201,37 @@ aside{
     } 
 }
  
+@media (max-width: $breakpoint-tablet) {
+    .container section .categoryMovies .movieResume
+    {margin: 0;
+    width: 30%;
+    &:hover{
+        -webkit-transform: inherit;
+        transform: inherit;
+    }}
+}
+
+@media (max-width: $breakpoint-mobile) {
+  nav,aside,#buttonDiv {display: none;};
+.container header .first-mob #searchInput 
+{height: 20px;
+width: 80%;
+font-size: 12px;
+}
+.categoryMovies{display: flex;
+flex-direction: column;}
+.container section .categoryMovies .movieResume
+{margin: 0;
+width: 100%;
+&:hover{
+    -webkit-transform: inherit;
+    transform: inherit;
+}}
+.container header .first-mob .burger-button
+{display: block;
+display: flex;
+align-items: center;
+justify-content: center;
+color: $orange;
+width: 10%;}
+}

@@ -73,7 +73,10 @@ aside nav .types .type a i {
 .container header {
   width: 100%;
 }
-.container header #searchInput {
+.container header .first-mob {
+  display: flex;
+}
+.container header .first-mob #searchInput {
   font-size: 18px;
   width: 96%;
   background-color: #FDC915;
@@ -84,8 +87,11 @@ aside nav .types .type a i {
   padding: 15px 25px;
   height: 49px;
 }
-.container header #searchInput:focus {
+.container header .first-mob #searchInput:focus {
   outline-width: 0;
+}
+.container header .first-mob .burger-button {
+  display: none;
 }
 .container section {
   display: block;
@@ -214,6 +220,51 @@ aside nav .types .type a i {
 #buttonDiv .buttonLoadMore:hover {
   color: #fff;
   background-color: #ED5C0D;
+}
+
+@media (max-width: 768px) {
+  .container section .categoryMovies .movieResume {
+    margin: 0;
+    width: 30%;
+  }
+  .container section .categoryMovies .movieResume:hover {
+    -webkit-transform: inherit;
+    transform: inherit;
+  }
+}
+@media (max-width: 400px) {
+  nav, aside, #buttonDiv {
+    display: none;
+  }
+
+  .container header .first-mob #searchInput {
+    height: 20px;
+    width: 80%;
+    font-size: 12px;
+  }
+
+  .categoryMovies {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container section .categoryMovies .movieResume {
+    margin: 0;
+    width: 100%;
+  }
+  .container section .categoryMovies .movieResume:hover {
+    -webkit-transform: inherit;
+    transform: inherit;
+  }
+
+  .container header .first-mob .burger-button {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ED5C0D;
+    width: 10%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

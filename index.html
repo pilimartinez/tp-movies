@@ -12,7 +12,8 @@
 </head>
 <body onload='initialize()' >
     <aside>
-        <div class="logo"><a href="index.html"> <img src="images/tmb.png" class="logoimg"></a></div>
+            <div class="logo"><a href="index.html"> <img src="images/tmb.png" class="logoimg"></a></div>
+   
         <nav>
             <ul class="types">                
                 <li class="type"><a href="#" onclick="allCategory('popular')"><i class="far fa-star"></i>POPULAR</a></li>
@@ -24,8 +25,10 @@
     </aside>
     <div class="container">
         <header>
-            
+            <div class="first-mob">
                 <input type="text" placeholder="Search for a movie..." id="searchInput" onkeyup="handleSearch()">
+                <a href="#" class="burger-button"><i class="fas fa-bars"></i></a>
+            </div>
                 <ul id="search-results"></ul>
         </header>
         <section>
