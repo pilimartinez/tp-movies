@@ -12,9 +12,8 @@ const customFetch = (url) => {
 const initialize = () => {
     customFetch('popular')
     .then(res => movieTopFive(res.results))
-    
+    CreateButton()
 }
-
 
 
  //first five
@@ -26,11 +25,11 @@ const movieTopFive = (category) => {
     movieDivTitle.innerText = 'popular'
     movieDivTitle.classList.add("movieDivTitle")
     let movieDivLink = document.createElement('a')
-    movieDivLink.innerText = "View More"
+    movieDivLink.innerText = "View More >"
     movieDivLink.href = "#"
     movieDivLink.classList.add("movieDivLink")
     movieDiv.appendChild(movieDivTitle)
-    movieDiv.appendChild(movieDivLink)
+
     let filterMovies =  category.filter((top, i) => { if(i <5) return top})
     filterMovies.forEach(({title,poster_path, id}) => {  
         let movie = document.createElement('div')
@@ -53,8 +52,8 @@ const movieTopFive = (category) => {
         movie.appendChild(li)
         movie.appendChild(movieTitle)
         movieDiv.appendChild(movie)
+        movieDiv.appendChild(movieDivLink)
     })   
-    
 } 
 
 
@@ -124,19 +123,8 @@ const movieCategory = (category) => {
         movie.appendChild(li)
         movieDiv.appendChild(movie)
         movie.appendChild(movieTitle)
-        
-        
-        
-        
     }) 
-    let buttonDetail = document.createElement('button')
-        buttonDetail.onclick = ()=> morePages()
-        buttonDetail.innerText = "Load More"
-        buttonDetail.classList.add('buttonLoadMore')
-        movieDiv.appendChild(buttonDetail)
 } 
-
-
 
 
     // more pages  --> hay que cambiarle la url, que sea dinamica. 
@@ -148,7 +136,14 @@ const morePages = () => {
         .then(res => movieCategory(res.results))
         }
  
-
+const CreateButton = () => {
+    let buttonDiv = document.getElementById('buttonDiv')
+    let buttonDetail = document.createElement('button')
+buttonDetail.onclick = ()=> morePages()
+buttonDetail.innerText = "LOAD MORE"
+buttonDetail.classList.add('buttonLoadMore')
+buttonDiv.appendChild(buttonDetail) 
+}
 
  // modal
 

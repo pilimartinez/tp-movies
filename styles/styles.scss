@@ -3,7 +3,7 @@
 
 body{
     margin: 0;
-    background-color: pink;
+    background-color: $cream;
    display: flex;
    z-index: 0;
 }
@@ -11,36 +11,44 @@ body{
 aside{
     
     display:block;
-    background-color: white;
+    background-color: $yellow;
     width: 95px;
     top: 0px;
-    .logo a .logoimg{
-        width: 35px;
-        padding: 18px 30px;  
-        background-color: black;
-
-     
+    .logo a{
+        background-color: $cream;
     }
-    nav{
-        
+    nav{ 
         .types{
             .type{
-            @include font(10px);
-            text-decoration: none;
-            color: gray;            
-            width: 35px;
-            background-color: white;
+            @include font(10px);           
+            background-color: $yellow;
             list-style: none;
-            padding: 25px 30px;
-            border-bottom: 1px gray solid;                
-                 
+            padding: 30px 0px;
+            border-bottom: 2px $cream solid;    
+            &:hover{
+                transition: 0.3s;
+                background-color: $orange;
+            }           
+                 a{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    text-decoration: none;
+                    color: $cream;
+                     i{
+                         margin-bottom: 5px;
+                         font-size: 15px;
+                         text-align: center;
+                     }
+                 }
             
                     }
                 }
                 
             }
         }
-    
+  
+        ::placeholder { color: $cream; }        
 .container{
     width: calc(100%-95px);
     header {          
@@ -50,14 +58,14 @@ aside{
                 outline-width: 0;
             }
             font-size: 18px;
-            width: 100%;
-            background-color:white;
+            width: 96%;
+            background-color:$yellow;
             text-decoration: none;
             border: none;
-            color: black;
+            color: $cream;
             box-sizing: content-box;
             padding: 15px 25px;
-            height: 46px;
+            height: 49px;
             
         }
     
@@ -65,17 +73,7 @@ aside{
     section{
         display: block;
         .main-banner{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 500px;
-            background: no-repeat center ;
-            background-size: cover; 
-            position: relative;
-            text-align: center;
             .img-banner{
-                height: 100%;
                 width: 100%;
             }
             h1{
@@ -89,38 +87,48 @@ aside{
             padding: 15px;
             box-sizing: border-box;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-evenly;
+            flex-wrap: wrap;
             .movieResume{
                 display: flex;
                 flex-direction: column;
                 padding: 5px;  
-                width: 15%
+                width: 15%;
+                &:hover{
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.2);
+                    transition: 0.3s;
+                    background-color: white;
+                }
                 }
             .movieDivTitle{
                 @include font(18px);
-                padding: 5px;
+                padding: 2px;
                 text-transform: uppercase;
+                color: $orange;
+                font-weight: bold;
             }
             .movieDivLink{
-                @include font(18px);
+                @include font(12px);
                 padding: 5px;
                 text-transform: uppercase;
+                color: $orange;
+                &:hover{
+                    color: $blue;
+                    transition: 0.3s;
+                }
             }
             .movieTitle{
                 @include font(12px);
                 padding: 5px;
+                font-weight: bold;
                 text-transform: uppercase;
+                color: $orange;
                     }
                 .movieImage{
                             display: block;
                             max-width: 100%;
                             height: auto;
-        
-                            &:hover{
-                                max-width: 104%;
-                                transition: 0.4s;
-                            }
                             }
                     }
             }
@@ -133,36 +141,59 @@ aside{
     top:0;
     left:0;
     z-index: 99;
-}
-
-#modalBackground {
-    width:100vw;
-    height:100vh;
-    background-color:rgba(250, 218, 221, 0.9);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-#modal {
-    height:80%;
-    width:50%;
-}
-
-#upperModal {
-    height:50%;
-    background-color:aqua;
-}
-
-#lowerModal {
-    height:50%;
-    background-color: antiquewhite
+    #modalBackground {
+        width:100vw;
+        height:100vh;
+        background-color:rgba(250, 218, 221, 0.9);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        #modal {
+            height:80%;
+            width:50%;
+            #upperModal {
+                height:50%;
+                background-color:aqua;
+            }
+            
+            #lowerModal {
+                height:50%;
+                background-color: antiquewhite
+            }
+        }
+    }
 }
 
 #search-results {
     display: flex;
     flex-direction: column;
     .result{
-        color: white;
+        color: $orange;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 2px;
+        font-size: 15px;
+        &:hover{
+            color: $blue;
+            font-size: 20px;
+            transition: 0.3s;
+        }
     }
 }
+
+#buttonDiv{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    .buttonLoadMore{
+        padding: 25px 60px;
+        font-size: 18px;
+        border: 1px solid $orange;
+        border-radius: .25rem;
+        color: $orange;
+        transition: color .15s ease-in-out,
+          background-color .15s ease-in-out;
+          &:hover{  color: #fff;
+            background-color: $orange;}
+    } 
+}
+ 

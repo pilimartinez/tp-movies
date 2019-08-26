@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-* {
-  box-sizing: border-box;
-}
-
-body {
-=======
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,7 +11,6 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
->>>>>>> 37fc6d18131d0ef7b96c5a69afb31bd13f12b3ee
   margin: 0;
   padding: 0;
   border: 0;
@@ -31,42 +23,48 @@ time, mark, audio, video {
 
 body {
   margin: 0;
-  background-color: pink;
+  background-color: #FDFDFD;
   display: flex;
   z-index: 0;
 }
 
 aside {
   display: block;
-  background-color: white;
+  background-color: #FDC915;
   width: 95px;
   top: 0px;
 }
-<<<<<<< HEAD
-header .logo {
-  width: 100px;
-  height: 45px;
-}
-header .logo .logoimg {
-  width: 100%;
-=======
-aside .logo a .logoimg {
-  width: 35px;
->>>>>>> 37fc6d18131d0ef7b96c5a69afb31bd13f12b3ee
-  padding: 18px 30px;
-  background-color: black;
+aside .logo a {
+  background-color: #FDFDFD;
 }
 aside nav .types .type {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
   color: #444;
-  text-decoration: none;
-  color: gray;
-  width: 35px;
-  background-color: white;
+  background-color: #FDC915;
   list-style: none;
-  padding: 25px 30px;
-  border-bottom: 1px gray solid;
+  padding: 30px 0px;
+  border-bottom: 2px #FDFDFD solid;
+}
+aside nav .types .type:hover {
+  transition: 0.3s;
+  background-color: #ED5C0D;
+}
+aside nav .types .type a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #FDFDFD;
+}
+aside nav .types .type a i {
+  margin-bottom: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+
+::placeholder {
+  color: #FDFDFD;
 }
 
 .container {
@@ -77,14 +75,14 @@ aside nav .types .type {
 }
 .container header #searchInput {
   font-size: 18px;
-  width: 100%;
-  background-color: white;
+  width: 96%;
+  background-color: #FDC915;
   text-decoration: none;
   border: none;
-  color: black;
+  color: #FDFDFD;
   box-sizing: content-box;
   padding: 15px 25px;
-  height: 45px;
+  height: 49px;
 }
 .container header #searchInput:focus {
   outline-width: 0;
@@ -92,29 +90,7 @@ aside nav .types .type {
 .container section {
   display: block;
 }
-<<<<<<< HEAD
-nav .types li {
-  width: 100px;
-  text-align: center;
-  background-color: white;
-  list-style: none;
-  padding: 25px 30px;
-  border-bottom: 1px gray solid;
-=======
-.container section .main-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 500px;
-  background: no-repeat center;
-  background-size: cover;
-  position: relative;
-  text-align: center;
->>>>>>> 37fc6d18131d0ef7b96c5a69afb31bd13f12b3ee
-}
 .container section .main-banner .img-banner {
-  height: 100%;
   width: 100%;
 }
 .container section .main-banner h1 {
@@ -127,8 +103,8 @@ nav .types li {
   padding: 15px;
   box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .container section .categoryMovies .movieResume {
   display: flex;
@@ -136,35 +112,46 @@ nav .types li {
   padding: 5px;
   width: 15%;
 }
+.container section .categoryMovies .movieResume:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.2);
+  transition: 0.3s;
+  background-color: white;
+}
 .container section .categoryMovies .movieDivTitle {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #444;
-  padding: 5px;
+  padding: 2px;
   text-transform: uppercase;
+  color: #ED5C0D;
+  font-weight: bold;
 }
 .container section .categoryMovies .movieDivLink {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   color: #444;
   padding: 5px;
   text-transform: uppercase;
+  color: #ED5C0D;
+}
+.container section .categoryMovies .movieDivLink:hover {
+  color: #5c92f4;
+  transition: 0.3s;
 }
 .container section .categoryMovies .movieTitle {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #444;
   padding: 5px;
+  font-weight: bold;
   text-transform: uppercase;
+  color: #ED5C0D;
 }
 .container section .categoryMovies .movieImage {
   display: block;
   max-width: 100%;
   height: auto;
-}
-.container section .categoryMovies .movieImage:hover {
-  max-width: 104%;
-  transition: 0.4s;
 }
 
 #modalContainer {
@@ -174,8 +161,7 @@ nav .types li {
   left: 0;
   z-index: 99;
 }
-
-#modalBackground {
+#modalContainer #modalBackground {
   width: 100vw;
   height: 100vh;
   background-color: rgba(250, 218, 221, 0.9);
@@ -183,18 +169,15 @@ nav .types li {
   align-items: center;
   justify-content: center;
 }
-
-#modal {
+#modalContainer #modalBackground #modal {
   height: 80%;
   width: 50%;
 }
-
-#upperModal {
+#modalContainer #modalBackground #modal #upperModal {
   height: 50%;
   background-color: aqua;
 }
-
-#lowerModal {
+#modalContainer #modalBackground #modal #lowerModal {
   height: 50%;
   background-color: antiquewhite;
 }
@@ -204,7 +187,33 @@ nav .types li {
   flex-direction: column;
 }
 #search-results .result {
-  color: white;
+  color: #ED5C0D;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+#search-results .result:hover {
+  color: #5c92f4;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+#buttonDiv {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+#buttonDiv .buttonLoadMore {
+  padding: 25px 60px;
+  font-size: 18px;
+  border: 1px solid #ED5C0D;
+  border-radius: 0.25rem;
+  color: #ED5C0D;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+#buttonDiv .buttonLoadMore:hover {
+  color: #fff;
+  background-color: #ED5C0D;
 }
 
 /*# sourceMappingURL=styles.css.map */
