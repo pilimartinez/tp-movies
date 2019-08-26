@@ -1,10 +1,11 @@
 const apiKey = "1b63eaf9251799c15f140837c94d7a45"
-
+let currentPage = 1
 
 const customFetch = (url) => {
-    const endPoint = `https://api.themoviedb.org/3/movie/${url}?api_key=${apiKey}`
+    const endPoint = `https://api.themoviedb.org/3/movie/${url}?api_key=${apiKey}&page=${currentPage}`
     return fetch(endPoint+url)
     .then(response => response.json())
+ 
         }
 
 // inicial page
@@ -101,6 +102,7 @@ const movieCategory = (category) => {
     let movieDiv = document.getElementById('category-movies')
     movieDiv.innerHTML = ''
     movieDiv.classList.add('categoryMovies')
+    
     let findMovies =  category.forEach(({title,poster_path, id}) => {
         let movie = document.createElement('div')
         movie.classList.add('movieResume')
@@ -122,29 +124,29 @@ const movieCategory = (category) => {
         movie.appendChild(li)
         movieDiv.appendChild(movie)
         movie.appendChild(movieTitle)
-    })   
+        
+        
+        
+        
+    }) 
+    let buttonDetail = document.createElement('button')
+        buttonDetail.onclick = ()=> morePages()
+        buttonDetail.innerText = "Load More"
+        buttonDetail.classList.add('buttonLoadMore')
+        movieDiv.appendChild(buttonDetail)
 } 
 
 
 
 
-    // more pages
-
-let paginaActual = 2
-    const page = () => {
-     paginaActual ++
-        morePages()
-    }
-
+    // more pages  --> hay que cambiarle la url, que sea dinamica. 
 
 const morePages = () => {
-
-/*         let button = document.getElementById('boton')
-        button.classList.add('claseBoton')
-  */       fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
-        .then(response => response.json())
-        .then(res => console.log(res.results(title)))
-}
+    currentPage ++
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${currentPage}`)
+        .then(response => response.json())         
+        .then(res => movieCategory(res.results))
+        }
  
 
 
