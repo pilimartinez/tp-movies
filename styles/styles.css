@@ -96,32 +96,46 @@ aside nav .types .type {
   font-size: 30px;
   color: #444;
 }
-.container section .popularMovies {
+.container section .categoryMovies {
   padding: 15px;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.container section .popularMovies .movieResume {
+.container section .categoryMovies .movieResume {
   display: flex;
   flex-direction: column;
   padding: 5px;
   width: 15%;
 }
-.container section .popularMovies .movieTitle {
+.container section .categoryMovies .movieDivTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #444;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.container section .categoryMovies .movieDivLink {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #444;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.container section .categoryMovies .movieTitle {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #444;
   padding: 5px;
   text-transform: uppercase;
 }
-.container section .popularMovies .movieImage {
+.container section .categoryMovies .movieImage {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.container section .popularMovies .movieImage:hover {
+.container section .categoryMovies .movieImage:hover {
   max-width: 104%;
   transition: 0.4s;
 }
