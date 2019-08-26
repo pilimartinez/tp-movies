@@ -1,27 +1,83 @@
+<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
 
 body {
+=======
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+>>>>>>> 37fc6d18131d0ef7b96c5a69afb31bd13f12b3ee
   margin: 0;
-  background-color: gray;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
 }
 
-header {
+body {
+  margin: 0;
+  background-color: pink;
   display: flex;
+  z-index: 0;
 }
+
+aside {
+  display: block;
+  background-color: white;
+  width: 95px;
+  top: 0px;
+}
+<<<<<<< HEAD
 header .logo {
   width: 100px;
   height: 45px;
 }
 header .logo .logoimg {
   width: 100%;
+=======
+aside .logo a .logoimg {
+  width: 35px;
+>>>>>>> 37fc6d18131d0ef7b96c5a69afb31bd13f12b3ee
   padding: 18px 30px;
   background-color: black;
 }
-header .searchInput {
+aside nav .types .type {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: #444;
+  text-decoration: none;
+  color: gray;
+  width: 35px;
+  background-color: white;
+  list-style: none;
+  padding: 25px 30px;
+  border-bottom: 1px gray solid;
+}
+
+.container {
+  width: calc(100%-95px);
+}
+.container header {
+  width: 100%;
+}
+.container header #searchInput {
   font-size: 18px;
-  width: 90%;
+  width: 100%;
   background-color: white;
   text-decoration: none;
   border: none;
@@ -30,14 +86,13 @@ header .searchInput {
   padding: 15px 25px;
   height: 45px;
 }
-header .searchInput:focus {
+.container header #searchInput:focus {
   outline-width: 0;
 }
-
-nav .types {
-  margin: 0px;
-  padding: 0px;
+.container section {
+  display: block;
 }
+<<<<<<< HEAD
 nav .types li {
   width: 100px;
   text-align: center;
@@ -45,14 +100,111 @@ nav .types li {
   list-style: none;
   padding: 25px 30px;
   border-bottom: 1px gray solid;
+=======
+.container section .main-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background: no-repeat center;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+>>>>>>> 37fc6d18131d0ef7b96c5a69afb31bd13f12b3ee
 }
-nav .types li .type {
-  font-size: 10px;
-  text-decoration: none;
-  color: gray;
+.container section .main-banner .img-banner {
+  height: 100%;
+  width: 100%;
 }
-nav .types li .type i {
+.container section .main-banner h1 {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #444;
+}
+.container section .categoryMovies {
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container section .categoryMovies .movieResume {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 15%;
+}
+.container section .categoryMovies .movieDivTitle {
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
+  color: #444;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.container section .categoryMovies .movieDivLink {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #444;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.container section .categoryMovies .movieTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #444;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.container section .categoryMovies .movieImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container section .categoryMovies .movieImage:hover {
+  max-width: 104%;
+  transition: 0.4s;
+}
+
+#modalContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(250, 218, 221, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal {
+  height: 80%;
+  width: 50%;
+}
+
+#upperModal {
+  height: 50%;
+  background-color: aqua;
+}
+
+#lowerModal {
+  height: 50%;
+  background-color: antiquewhite;
+}
+
+#search-results {
+  display: flex;
+  flex-direction: column;
+}
+#search-results .result {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
