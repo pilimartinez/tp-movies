@@ -96,6 +96,7 @@ const movieCategory = (category) => {
     let movieDiv = document.getElementById('category-movies')
     movieDiv.innerHTML = ''
     movieDiv.classList.add('categoryMovies')    
+
     
     let findMovies =  category.forEach(({title,poster_path, id}) => {
         let movie = document.createElement('div')
@@ -181,6 +182,7 @@ const CreateButton = (movieType) => {
 const allCategory = (url) => {
     customFetch(url)
        .then(res => {
+           
            movieCategory(res.results)
        })
        CreateButton(url)

@@ -13,13 +13,17 @@ aside{
     display:block;
     background-color: $yellow;
     width: 95px;
+    height: 100%;
     top: 0px;
     position: fixed;
+    background-color: $yellow;
     .logo a{
         background-color: $cream;
     }
     nav{ 
+        
         .types{
+   
             .type{
             @include font(10px);           
             background-color: $yellow;
@@ -88,6 +92,9 @@ aside{
             .img-banner{
                 width: 100%;
             }
+        .removeBanner{
+            display: none;
+        }
             h1{
                 position: absolute;
                

@@ -32,8 +32,10 @@ aside {
   display: block;
   background-color: #FDC915;
   width: 95px;
+  height: 100%;
   top: 0px;
   position: fixed;
+  background-color: #FDC915;
 }
 aside .logo a {
   background-color: #FDFDFD;
@@ -103,6 +105,9 @@ aside nav .types .type a i {
 }
 .container section .main-banner .img-banner {
   width: 100%;
+}
+.container section .main-banner .removeBanner {
+  display: none;
 }
 .container section .main-banner h1 {
   position: absolute;
