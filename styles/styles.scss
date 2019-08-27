@@ -164,51 +164,46 @@ aside{
     #modalBackground {
         width:100vw;
         height:100vh;
-        background-color: $cream;
+        background-color: rgba(255, 255, 255, 0.322);
         display:flex;
         align-items:center;
         justify-content:center;
         #modal {
             height:80%;
-            width:80%;
+            width:55%;
             #upperModal {
-                height:44%;
+                height:10%;
                 background-color: $yellow;
-                padding: 10px;
+                padding: 5%;
                 a{
-                    position: absolute;
-                    right: 104px;
+                    float: right;
+                    color: $cream;
                 }
                 h2{
-                    @include font(24px)
+                    @include font(25px);
+                    color: $yellow;
                 }
                 #img-modal{
-                    position: absolute;
-                    left: 101px;
-                    width: 28%;
-                    height: 60%;
-                    bottom: 99px;
-                    
+                 width: 200px;   
                 }
             }
             
             #lowerModal {
-                height:50%;
+                height:65%;
                 background-color:$orange;
-                padding:10px;
                 .movieDetails{
-                    width: 44%;
-                    position: absolute;
-                    right: 106px;
-                    top: 156px;
-
-                .modalTitle{
+                    width: 40%;
+                    float: right;
+                    margin-right: 5%;
+                      .modalTitle{
                     padding:10px;
-                    @include font(16px)
+                    @include font(16px);
+                    color:$yellow;
 
                     }
                  p{
-                     @include font(12px)
+                     @include font(12px);
+                     color:$cream;
                  }   
                 }
             }
