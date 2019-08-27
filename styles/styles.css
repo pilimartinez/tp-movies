@@ -188,6 +188,7 @@ body {
 }
 #modalContainer #modalBackground #modal #upperModal {
   background-color: #FDC915;
+  padding: 2%;
 }
 #modalContainer #modalBackground #modal #upperModal a {
   float: right;
@@ -204,6 +205,7 @@ body {
 }
 #modalContainer #modalBackground #modal #lowerModal {
   background-color: #ED5C0D;
+  padding: 2%;
 }
 #modalContainer #modalBackground #modal #lowerModal .movieDetails {
   margin-right: 5%;

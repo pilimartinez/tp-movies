@@ -167,6 +167,7 @@ body{
             width:45%;
             #upperModal {
                 background-color: $yellow;
+                padding: 2%;
                 a{
                     float: right;
                     color: $cream;
@@ -182,6 +183,7 @@ body{
             
             #lowerModal {
                 background-color:$orange;
+                padding: 2%;
                 .movieDetails{
                     margin-right: 5%;
                       .modalTitle{
