@@ -8,8 +8,7 @@ body{
    z-index: 0;
 }
 
-aside{
-    
+#aside{
     display:block;
     background-color: $yellow;
     width: 95px;
@@ -21,7 +20,6 @@ aside{
         background-color: $cream;
     }
     nav{ 
-        
         .types{
    
             .type{
@@ -56,14 +54,11 @@ aside{
         ::placeholder { color: $cream; }        
 .container{
     width: calc(100%-95px);
-    
     header { 
         position:fixed;
-        
         left: 95px;         
         width: 100%;
         .first-mob{
-            display: flex;
         #searchInput {
             &:focus {
                 outline-width: 0;
@@ -169,31 +164,25 @@ aside{
         align-items:center;
         justify-content:center;
         #modal {
-            height:80%;
-            width:55%;
+            width:45%;
             #upperModal {
-                height:10%;
                 background-color: $yellow;
-                padding: 5%;
                 a{
                     float: right;
                     color: $cream;
                 }
                 h2{
-                    @include font(25px);
-                    color: $yellow;
+                    @include font(15px);
+                    color: $orange;
                 }
                 #img-modal{
-                 width: 200px;   
+                 width: 150px;   
                 }
             }
             
             #lowerModal {
-                height:65%;
                 background-color:$orange;
                 .movieDetails{
-                    width: 40%;
-                    float: right;
                     margin-right: 5%;
                       .modalTitle{
                     padding:10px;
@@ -214,6 +203,7 @@ aside{
 #search-results {
     display: flex;
     flex-direction: column;
+    background-color: $cream;
     .result{
         color: $orange;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -255,26 +245,61 @@ aside{
 }
 
 @media (max-width: $breakpoint-mobile) {
-  nav,aside,#buttonDiv {display: none;};
+#buttonDiv,#aside {display: none;};
 .container header .first-mob #searchInput 
 {height: 20px;
 width: 80%;
 font-size: 12px;
 }
+.logo{display: none;}
+#aside{
+    width: 100%;
+    height: inherit;
+}
+#aside nav{
+    margin-top: 45px;   
+}
+.img-banner{display: none;}
+.first-mob{
+    display: flex;
+}
+.container section{
+padding: 0;
+margin: 0;
+}
+.container header{
+left: 0;
+}
 .categoryMovies{display: flex;
 flex-direction: column;}
 .container section .categoryMovies .movieResume
 {margin: 0;
-width: 100%;
+width: 80%;
 &:hover{
     -webkit-transform: inherit;
     transform: inherit;
 }}
 .container header .first-mob .burger-button
-{display: block;
-display: flex;
-align-items: center;
-justify-content: center;
+{align-items: center;
 color: $orange;
-width: 10%;}
+display: flex;
+width: 10%;
+justify-content: center;
+background-color: $cream;}
+#search-results .result{
+    font-size: 12px;
+    &:hover{
+        font-size: 12px;
+    }
+}
+#aside nav .types .type{
+    padding: 10px 0px;
+    background-color: $orange;
+}
+#modalContainer #modalBackground #modal #upperModal #img-modal{
+    display: none;
+}
+#modalContainer #modalBackground #modal{
+    width: 85%;
+}
 }

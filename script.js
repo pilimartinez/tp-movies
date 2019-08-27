@@ -188,3 +188,13 @@ const allCategory = (url) => {
        CreateButton(url)
 }
 
+// burger menu
+
+const showData = () => {
+   let container = document.getElementById('aside')
+   if (container.style.display === "none") {
+    container.style.display = "block";
+} else {
+    container.style.display = "none";
+}
+}

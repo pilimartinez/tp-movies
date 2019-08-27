@@ -28,7 +28,7 @@ body {
   z-index: 0;
 }
 
-aside {
+#aside {
   display: block;
   background-color: #FDC915;
   width: 95px;
@@ -37,10 +37,10 @@ aside {
   position: fixed;
   background-color: #FDC915;
 }
-aside .logo a {
+#aside .logo a {
   background-color: #FDFDFD;
 }
-aside nav .types .type {
+#aside nav .types .type {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
   color: #444;
@@ -49,18 +49,18 @@ aside nav .types .type {
   padding: 30px 0px;
   border-bottom: 2px #FDFDFD solid;
 }
-aside nav .types .type:hover {
+#aside nav .types .type:hover {
   transition: 0.3s;
   background-color: #ED5C0D;
 }
-aside nav .types .type a {
+#aside nav .types .type a {
   display: flex;
   align-items: center;
   flex-direction: column;
   text-decoration: none;
   color: #FDFDFD;
 }
-aside nav .types .type a i {
+#aside nav .types .type a i {
   margin-bottom: 5px;
   font-size: 15px;
   text-align: center;
@@ -77,9 +77,6 @@ aside nav .types .type a i {
   position: fixed;
   left: 95px;
   width: 100%;
-}
-.container header .first-mob {
-  display: flex;
 }
 .container header .first-mob #searchInput {
   font-size: 18px;
@@ -187,13 +184,10 @@ aside nav .types .type a i {
   justify-content: center;
 }
 #modalContainer #modalBackground #modal {
-  height: 80%;
-  width: 55%;
+  width: 45%;
 }
 #modalContainer #modalBackground #modal #upperModal {
-  height: 10%;
   background-color: #FDC915;
-  padding: 5%;
 }
 #modalContainer #modalBackground #modal #upperModal a {
   float: right;
@@ -201,20 +195,17 @@ aside nav .types .type a i {
 }
 #modalContainer #modalBackground #modal #upperModal h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 25px;
+  font-size: 15px;
   color: #444;
-  color: #FDC915;
+  color: #ED5C0D;
 }
 #modalContainer #modalBackground #modal #upperModal #img-modal {
-  width: 200px;
+  width: 150px;
 }
 #modalContainer #modalBackground #modal #lowerModal {
-  height: 65%;
   background-color: #ED5C0D;
 }
 #modalContainer #modalBackground #modal #lowerModal .movieDetails {
-  width: 40%;
-  float: right;
   margin-right: 5%;
 }
 #modalContainer #modalBackground #modal #lowerModal .movieDetails .modalTitle {
@@ -234,6 +225,7 @@ aside nav .types .type a i {
 #search-results {
   display: flex;
   flex-direction: column;
+  background-color: #FDFDFD;
 }
 #search-results .result {
   color: #ED5C0D;
@@ -276,7 +268,7 @@ aside nav .types .type a i {
   }
 }
 @media (max-width: 400px) {
-  nav, aside, #buttonDiv {
+  #buttonDiv, #aside {
     display: none;
   }
 
@@ -286,6 +278,36 @@ aside nav .types .type a i {
     font-size: 12px;
   }
 
+  .logo {
+    display: none;
+  }
+
+  #aside {
+    width: 100%;
+    height: inherit;
+  }
+
+  #aside nav {
+    margin-top: 45px;
+  }
+
+  .img-banner {
+    display: none;
+  }
+
+  .first-mob {
+    display: flex;
+  }
+
+  .container section {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container header {
+    left: 0;
+  }
+
   .categoryMovies {
     display: flex;
     flex-direction: column;
@@ -293,7 +315,7 @@ aside nav .types .type a i {
 
   .container section .categoryMovies .movieResume {
     margin: 0;
-    width: 100%;
+    width: 80%;
   }
   .container section .categoryMovies .movieResume:hover {
     -webkit-transform: inherit;
@@ -301,12 +323,32 @@ aside nav .types .type a i {
   }
 
   .container header .first-mob .burger-button {
-    display: block;
-    display: flex;
     align-items: center;
-    justify-content: center;
     color: #ED5C0D;
+    display: flex;
     width: 10%;
+    justify-content: center;
+    background-color: #FDFDFD;
+  }
+
+  #search-results .result {
+    font-size: 12px;
+  }
+  #search-results .result:hover {
+    font-size: 12px;
+  }
+
+  #aside nav .types .type {
+    padding: 10px 0px;
+    background-color: #ED5C0D;
+  }
+
+  #modalContainer #modalBackground #modal #upperModal #img-modal {
+    display: none;
+  }
+
+  #modalContainer #modalBackground #modal {
+    width: 85%;
   }
 }
 

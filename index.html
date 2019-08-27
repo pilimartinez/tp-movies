@@ -11,11 +11,11 @@
     <title>The Movie Place</title>
 </head>
 <body onload='initialize()' >
-    <aside>
+    <aside id="aside">
             <div class="logo"><a href="index.html"> <img src="images/tmb.png" class="logoimg"></a></div>
    
         <nav>
-            <ul class="types">                
+            <ul class="types" >                
                 <li class="type"><a href="#" onclick="allCategory('popular')"><i class="far fa-star"></i>POPULAR</a></li>
                 <li class="type"><a href="#" onclick="allCategory('top_rated')"><i class="fas fa-award"></i>TOP RATED</a></li>
                 <li class="type"><a href="#" onclick="allCategory('upcoming')"><i class="far fa-calendar-alt"></i>UPCOMING</a></li>
@@ -27,7 +27,7 @@
         <header>
             <div class="first-mob">
                 <input type="text" placeholder="Search for a movie..." id="searchInput" onkeyup="handleSearch()">
-                <a href="#" class="burger-button"><i class="fas fa-bars"></i></a>
+                <a href="#" class="burger-button" onclick="showData()"><i class="fas fa-bars"></i></a>
             </div>
                 <ul id="search-results"></ul>
         </header>
