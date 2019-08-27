@@ -21,7 +21,6 @@ const initialize = () => {
     PLAYING`))
 }
 
-
  //first five
 const movieTopFive = (category,container,title) => {
     let movieDiv = document.getElementById(container)
