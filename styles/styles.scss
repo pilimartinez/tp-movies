@@ -168,6 +168,10 @@ aside{
                 height:44%;
                 background-color: $yellow;
                 padding: 10px;
+                a{
+                    position: absolute;
+                    right: 104px;
+                }
                 h2{
                     @include font(24px)
                 }

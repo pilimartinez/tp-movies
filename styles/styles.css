@@ -190,6 +190,10 @@ aside nav .types .type a i {
   background-color: #FDC915;
   padding: 10px;
 }
+#modalContainer #modalBackground #modal #upperModal a {
+  position: absolute;
+  right: 104px;
+}
 #modalContainer #modalBackground #modal #upperModal h2 {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
