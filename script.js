@@ -12,7 +12,7 @@ const customFetch = (url) => {
 const initialize = () => {
     customFetch('popular')
     .then(res => movieTopFive(res.results))
-    CreateButton()
+    
 }
 
 
@@ -58,13 +58,8 @@ const movieTopFive = (category) => {
 
 
 
-// nav bar
-const allCategory = (url) => {
-     customFetch(url)
-        .then(res => {
-            movieCategory(res.results)
-        })
- }
+
+
 
 // searchBar
 
@@ -100,7 +95,7 @@ const printQueryResults = (movies) => {
 const movieCategory = (category) => {
     let movieDiv = document.getElementById('category-movies')
     movieDiv.innerHTML = ''
-    movieDiv.classList.add('categoryMovies')
+    movieDiv.classList.add('categoryMovies')    
     
     let findMovies =  category.forEach(({title,poster_path, id}) => {
         let movie = document.createElement('div')
@@ -129,20 +124,24 @@ const movieCategory = (category) => {
 
     // more pages  --> hay que cambiarle la url, que sea dinamica. 
 
-const morePages = () => {
+const morePages = (url) => {
     currentPage ++
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${currentPage}`)
-        .then(response => response.json())         
+        
+        fetch(`https://api.themoviedb.org/3/movie/${url}?api_key=${apiKey}&page=${currentPage}`)
+        .then(response => response.json())          
         .then(res => movieCategory(res.results))
-        }
+
+}
  
-const CreateButton = () => {
+const CreateButton = (movieType) => {
     let buttonDiv = document.getElementById('buttonDiv')
+    buttonDiv.innerHTML = ''
     let buttonDetail = document.createElement('button')
-buttonDetail.onclick = ()=> morePages()
-buttonDetail.innerText = "LOAD MORE"
-buttonDetail.classList.add('buttonLoadMore')
-buttonDiv.appendChild(buttonDetail) 
+        buttonDetail.onclick = ()=> morePages(movieType)
+        buttonDetail.innerText = "LOAD MORE"
+        buttonDetail.classList.add('buttonLoadMore')
+        buttonDiv.appendChild(buttonDetail) 
+        
 }
 
  // modal
@@ -173,4 +172,15 @@ buttonDiv.appendChild(buttonDetail)
             modal.style.display = "none";
         }
     }
+
+// nav bar
+
+
+const allCategory = (url) => {
+    customFetch(url)
+       .then(res => {
+           movieCategory(res.results)
+       })
+       CreateButton(url)
+}
 
