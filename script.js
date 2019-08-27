@@ -32,10 +32,11 @@ const movieTopFive = (category,container,title) => {
     movieDivTitle.classList.add("movieDivTitle")
     let movieDivLink = document.createElement('a')
     movieDivLink.innerText = "View More >"
-    movieDivLink.href = "#"
+    movieDivLink.href = '#'
+    movieDivLink.onclick = ()=> allCategory(container)
     movieDivLink.classList.add("movieDivLink")
     movieDiv.appendChild(movieDivTitle)
-
+    
     let filterMovies =  category.filter((top, i) => { if(i <5) return top})
     filterMovies.forEach(({title,poster_path, id}) => {  
         let movie = document.createElement('div')
@@ -129,7 +130,7 @@ const movieCategory = (category) => {
 } 
 
 
-    // more pages  --> hay que cambiarle la url, que sea dinamica. 
+    // more pages 
 
 const morePages = (url) => {
     currentPage ++
@@ -137,6 +138,8 @@ const morePages = (url) => {
         fetch(`https://api.themoviedb.org/3/movie/${url}?api_key=${apiKey}&page=${currentPage}`)
         .then(response => response.json())          
         .then(res => movieCategory(res.results))
+
+        
 
 }
  
@@ -171,6 +174,7 @@ const CreateButton = (movieType) => {
 
         })
     }  
+
     const toggleFunction = (movieId) => {
         var modal = document.getElementById("modalContainer");
         if (modal.style.display === "none") {
@@ -185,12 +189,21 @@ const CreateButton = (movieType) => {
 
 
 const allCategory = (url) => {
+    let container = document.getElementById('categoryInicial')
+    if (container.style.display === "none") {
+     container.style.display = "block";
+ } else {
+     container.style.display = "none";
+ }
     customFetch(url)
        .then(res => {
            
            movieCategory(res.results)
        })
+
+
        CreateButton(url)
+       
 }
 
 // burger menu
