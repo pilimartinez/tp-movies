@@ -14,6 +14,7 @@ aside{
     background-color: $yellow;
     width: 95px;
     top: 0px;
+    position: fixed;
     .logo a{
         background-color: $cream;
     }
@@ -51,13 +52,18 @@ aside{
         ::placeholder { color: $cream; }        
 .container{
     width: calc(100%-95px);
-    header {          
+    
+    header { 
+        position:fixed;
+        
+        left: 95px;         
         width: 100%;
         .first-mob{
             display: flex;
         #searchInput {
             &:focus {
                 outline-width: 0;
+
             }
             font-size: 18px;
             width: 96%;
@@ -75,7 +81,9 @@ aside{
         }}
     }
     section{
+        margin-left: 95px;
         display: block;
+        padding-top: 79px;
         .main-banner{
             .img-banner{
                 width: 100%;
@@ -111,6 +119,7 @@ aside{
                 text-transform: uppercase;
                 color: $orange;
                 font-weight: bold;
+                display: flex;
             }
             .movieDivLink{
                 @include font(12px);
@@ -148,21 +157,49 @@ aside{
     #modalBackground {
         width:100vw;
         height:100vh;
-        background-color:rgba(250, 218, 221, 0.9);
+        background-color: $cream;
         display:flex;
         align-items:center;
         justify-content:center;
         #modal {
             height:80%;
-            width:50%;
+            width:80%;
             #upperModal {
-                height:50%;
-                background-color:aqua;
+                height:44%;
+                background-color: $yellow;
+                padding: 10px;
+                h2{
+                    @include font(24px)
+                }
+                #img-modal{
+                    position: absolute;
+                    left: 101px;
+                    width: 28%;
+                    height: 60%;
+                    bottom: 99px;
+                    
+                }
             }
             
             #lowerModal {
                 height:50%;
-                background-color: antiquewhite
+                background-color:$orange;
+                padding:10px;
+                .movieDetails{
+                    width: 44%;
+                    position: absolute;
+                    right: 106px;
+                    top: 156px;
+
+                .modalTitle{
+                    padding:10px;
+                    @include font(16px)
+
+                    }
+                 p{
+                     @include font(12px)
+                 }   
+                }
             }
         }
     }

@@ -33,6 +33,7 @@ aside {
   background-color: #FDC915;
   width: 95px;
   top: 0px;
+  position: fixed;
 }
 aside .logo a {
   background-color: #FDFDFD;
@@ -71,6 +72,8 @@ aside nav .types .type a i {
   width: calc(100%-95px);
 }
 .container header {
+  position: fixed;
+  left: 95px;
   width: 100%;
 }
 .container header .first-mob {
@@ -94,7 +97,9 @@ aside nav .types .type a i {
   display: none;
 }
 .container section {
+  margin-left: 95px;
   display: block;
+  padding-top: 79px;
 }
 .container section .main-banner .img-banner {
   width: 100%;
@@ -132,6 +137,7 @@ aside nav .types .type a i {
   text-transform: uppercase;
   color: #ED5C0D;
   font-weight: bold;
+  display: flex;
 }
 .container section .categoryMovies .movieDivLink {
   font-family: "Roboto", sans-serif;
@@ -170,22 +176,53 @@ aside nav .types .type a i {
 #modalContainer #modalBackground {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(250, 218, 221, 0.9);
+  background-color: #FDFDFD;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 #modalContainer #modalBackground #modal {
   height: 80%;
-  width: 50%;
+  width: 80%;
 }
 #modalContainer #modalBackground #modal #upperModal {
-  height: 50%;
-  background-color: aqua;
+  height: 44%;
+  background-color: #FDC915;
+  padding: 10px;
+}
+#modalContainer #modalBackground #modal #upperModal h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: #444;
+}
+#modalContainer #modalBackground #modal #upperModal #img-modal {
+  position: absolute;
+  left: 101px;
+  width: 28%;
+  height: 60%;
+  bottom: 99px;
 }
 #modalContainer #modalBackground #modal #lowerModal {
   height: 50%;
-  background-color: antiquewhite;
+  background-color: #ED5C0D;
+  padding: 10px;
+}
+#modalContainer #modalBackground #modal #lowerModal .movieDetails {
+  width: 44%;
+  position: absolute;
+  right: 106px;
+  top: 156px;
+}
+#modalContainer #modalBackground #modal #lowerModal .movieDetails .modalTitle {
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #444;
+}
+#modalContainer #modalBackground #modal #lowerModal .movieDetails p {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #444;
 }
 
 #search-results {

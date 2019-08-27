@@ -151,7 +151,9 @@ const CreateButton = (movieType) => {
             .then(response => response.json())
             .then(res => {
                 const mainTitleNode = document.getElementById("mainTitle")
-                mainTitleNode.innerText = res.title
+                mainTitleNode.innerText = res.title 
+                /* const imgNode = document.getElementById("img-modal")
+                imgNode. = res.poster_path */ 
                 const descriptionNode =document.getElementById("movieDescription")
                 descriptionNode.innerText=res.overview
                 const genreNode = document.getElementById("genre")
