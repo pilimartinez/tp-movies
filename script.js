@@ -11,18 +11,24 @@ const customFetch = (url) => {
 // inicial page
 const initialize = () => {
     customFetch('popular')
-    .then(res => movieTopFive(res.results))
-    
+    .then(res => movieTopFive(res.results,'popular','POPULAR'))
+    customFetch('top_rated')
+    .then(res => movieTopFive(res.results,"top_rated",'TOP RATED'))
+    customFetch('upcoming')
+    .then(res => movieTopFive(res.results,"upcoming",'UPCOMING')) 
+    customFetch('now_playing')
+    .then(res => movieTopFive(res.results,"now_playing",`NOW
+    PLAYING`))
 }
 
 
  //first five
-const movieTopFive = (category) => {
-    let movieDiv = document.getElementById('category-movies')
+const movieTopFive = (category,container,title) => {
+    let movieDiv = document.getElementById(container)
     movieDiv.innerHTML = ''
     movieDiv.classList.add('categoryMovies')
     let movieDivTitle = document.createElement('p')
-    movieDivTitle.innerText = 'popular'
+    movieDivTitle.innerText = title
     movieDivTitle.classList.add("movieDivTitle")
     let movieDivLink = document.createElement('a')
     movieDivLink.innerText = "View More >"
@@ -153,8 +159,7 @@ const CreateButton = (movieType) => {
             .then(res => {
                 const mainTitleNode = document.getElementById("mainTitle")
                 mainTitleNode.innerText = res.title 
-                /* const imgNode = document.getElementById("img-modal")
-                imgNode. = res.poster_path */ 
+                document.getElementById("img-modal").src = `https://image.tmdb.org/t/p/w500${res.poster_path}`
                 const descriptionNode =document.getElementById("movieDescription")
                 descriptionNode.innerText=res.overview
                 const genreNode = document.getElementById("genre")
