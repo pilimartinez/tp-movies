@@ -97,7 +97,7 @@ body{
                 
             }
         }
-        .categoryMovies{
+        .categoryMovies,{
             padding: 15px;
             box-sizing: border-box;
             display: flex;
@@ -117,7 +117,6 @@ body{
                 }
             .movieDivTitle{
                 @include font(18px);
-                padding: 2px;
                 text-transform: uppercase;
                 color: $orange;
                 font-weight: bold;
@@ -201,7 +200,6 @@ body{
         }
     }
 }
-
 #search-results {
     display: flex;
     flex-direction: column;
@@ -304,4 +302,5 @@ background-color: $cream;}
 #modalContainer #modalBackground #modal{
     width: 85%;
 }
+#popular{    margin-top: 40px;}
 }

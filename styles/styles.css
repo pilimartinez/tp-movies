@@ -135,7 +135,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #444;
-  padding: 2px;
   text-transform: uppercase;
   color: #ED5C0D;
   font-weight: bold;
@@ -351,6 +350,10 @@ body {
 
   #modalContainer #modalBackground #modal {
     width: 85%;
+  }
+
+  #popular {
+    margin-top: 40px;
   }
 }
 
