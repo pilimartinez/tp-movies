@@ -87,6 +87,7 @@ const printQueryResults = (movies) => {
 		movie.href = '#';
 		movie.onclick = () => toggleFunction(id);
 		container.appendChild(movie);
+		//el nodo container es un ul y se le deberían appendear elementos li
 	});
 };
 // movie results
@@ -94,6 +95,7 @@ const movieCategory = (category) => {
 	let movieDiv = document.getElementById('category-movies')
 	movieDiv.innerHTML = ''
 	movieDiv.classList.add('categoryMovies')
+	//no es necesario crear una variable ya que forEach no retorna un nuevo array, si no que ejecuta una acción por cada elemento dentro del array
 	let findMovies = category.forEach(({
 		title,
 		poster_path,
@@ -155,8 +157,9 @@ const loadModal = (movieId) => {
 			const releaseDateNode = document.getElementById("releaseDate")
 			releaseDateNode.innerText = res.release_date
 		})
-}
-const toggleFunction = (movieId) => {
+	}
+	const toggleFunction = (movieId) => { //esta función se podría crear de manera independiente
+	// 'modalContainer' no tiene la clase none, por lo tanto se requiere de un click para que la función le agregue la clase 'none' al elemento y un segundo click para que se la quite y se muestre el modal. Sucede lo mismo con las funciones allCategory() y showData(), además, se repite el mismo bloque de código.
 	var modal = document.getElementById("modalContainer");
 	if (modal.style.display === "none") {
 		loadModal(movieId)
